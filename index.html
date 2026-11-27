@@ -40,19 +40,18 @@
   <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE" />
   <meta name="naver-site-verification" content="NAVER_VERIFICATION_CODE" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+  <script>document.documentElement.classList.add('motion-ready');</script>
 
 </head>
 <body>
-  <div class="top-notice">
-    회원가입 시 첫 이용 10,000원 즉시 할인 쿠폰 제공 · <a href="#pricing">요금 및 견적 확인하기</a>
-  </div>
 
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="brand-logo"><img src="assets/CF_logo.png" alt="클린앤픽스 로고" class="brand-logo-img" /></a>
       <nav class="main-nav" aria-label="주요 메뉴">
         <a href="#service">서비스 소개</a>
-        <a href="#process">청소 방식</a>
+        <a href="process.html">청소 방식</a>
         <a href="#pricing">요금 안내</a>
         <a href="#faq">자주 묻는 질문</a>
         <a href="#review">고객 후기</a>
@@ -66,10 +65,13 @@
 
   <main id="top">
    <section class="hero-full">
+    <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-inner">
-      <strong>클린앤픽스</strong>
-      <h1>보이지 않는 곳까지 깔끔하게,<br>청소와 수리를 한 번에</h1>
-      <p>전문 장비와 꼼꼼한 케어로 쾌적한 공간을 만들어 드립니다</p>
+      <h1 class="hero-title">
+        <span class="line"><span>보이지 않는 곳까지 깔끔하게,</span></span>
+        <span class="line"><span>청소와 수리를 한 번에</span></span>
+      </h1>
+      <p class="hero-desc">전문 장비와 꼼꼼한 케어로 쾌적한 공간을 만들어 드립니다</p>
       <div class="hero-list">
         <span>소파 청소</span>
         <span>매트리스 청소</span>
@@ -82,6 +84,8 @@
     </div>
   </section>
 
+  </div>
+
     <section id="service" class="section">
       <div class="container">
         <div class="section-head">
@@ -89,42 +93,33 @@
           <p>소파·매트리스부터 가전·공용부 관리까지 공간 특성에 맞춰 세심하게 케어합니다.</p>
         </div>
         <div class="grid-3">
-          <article class="card">
+          <a href="process.html" class="card card-link" aria-label="소파 &amp; 매트리스 &amp; 카펫 케어 - 클리닝 시스템 공정 안내 보기">
             <div class="service-thumb">
               <img src="assets/service_01.png" alt="소파 및 매트리스 케어" loading="lazy" onerror="this.remove();" />
             </div>
-            <h3>소파 &amp; 매트리스 케어</h3>
+            <h3>소파 &amp; 매트리스 &amp; 카펫 케어</h3>
             <p>생활 얼룩, 미세먼지, 집진드기, 냄새까지 섬유 손상을 최소화하며 깊숙이 세척합니다.</p>
-          </article>
+            <span class="card-more">8단계 공정 자세히 보기 <span aria-hidden="true">→</span></span>
+          </a>
           <article class="card">
             <div class="service-thumb">
-              <img src="assets/service_02.png" alt="가전 분해 청소 및 정비" loading="lazy" onerror="this.remove();" />
+              <img src="assets/service_02.jpg" alt="가전 분해 청소 및 정비" loading="lazy" onerror="this.remove();" />
             </div>
-            <h3>가전 분해 청소 &amp; 정비</h3>
+            <h3>에어컨 &amp; 세탁기 청소·수리</h3>
             <p>에어컨·세탁기 내부의 곰팡이와 찌든 때를 분해 세척하고 점검까지 함께 진행합니다.</p>
           </article>
           <article class="card">
             <div class="service-thumb">
-              <img src="assets/service_03.png" alt="카펫 계단 맞춤 케어" loading="lazy" onerror="this.remove();" />
+              <img src="assets/service_03.jpg" alt="카펫 계단 맞춤 케어" loading="lazy" onerror="this.remove();" />
             </div>
-            <h3>카펫 · 계단 · 맞춤 케어</h3>
+            <h3>상가 계단 &amp; 유리창 청소</h3>
             <p>가정, 상가, 오피스 등 공간 조건에 맞춘 정기·비정기 케어 솔루션을 제공합니다.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="process" class="section section-muted">
-      <div class="container">
-        <div class="section-head">
-          <h2>클리닝 시스템 공정 안내</h2>
-          <p>사전 진단부터 마무리 에어케어까지 표준화된 8단계 공정으로 진행합니다.</p>
-        </div>
-        <div class="grid-4" id="processGrid"></div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section">
+    <section id="pricing" class="section section-muted">
       <div class="container">
         <div class="section-head">
           <h2>요금 안내</h2>
@@ -168,7 +163,7 @@
       </div>
     </section>
 
-    <section id="faq" class="section section-muted">
+    <section id="faq" class="section">
       <div class="container narrow">
         <div class="section-head">
           <h2>자주 묻는 질문</h2>
@@ -178,7 +173,7 @@
       </div>
     </section>
 
-    <section id="review" class="section">
+    <section id="review" class="section section-muted">
       <div class="container">
         <div class="section-head">
           <h2>고객 후기</h2>
@@ -240,6 +235,13 @@
     </div>
   </div>
 
+  <a href="tel:010-4590-8875" class="fab-call" aria-label="전화 상담 010-4590-8875">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+  </a>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <script src="js/main.js"></script>
+  <script src="js/motion.js"></script>
 </body>
 </html>
