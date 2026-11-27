@@ -50,9 +50,9 @@ const stepsData = [
   },
   {
     step: "STEP 08",
-    title: "우드 호텔향 에어케어 & 결과 확인",
-    desc: "고급스러운 '우드 호텔향'으로 산뜻하고 쾌적한 공기 케어를 마무리하고, 최종 결과를 고객님과 함께 확인한 후 서비스를 마칩니다.",
-    equip: "사용 재료: 우드 호텔향 오일",
+    title: "아로마케어(우드호텔향)",
+    desc: "고급스러운 '우드호텔향'으로 산뜻하고 쾌적한 공기 케어를 마무리하고, 최종 결과를 고객님과 함께 확인한 후 서비스를 마칩니다.",
+    equip: "사용 재료: 우드호텔향 아로마오일",
     imgSrc: "assets/step-08.png"
   }
 ];
@@ -79,7 +79,11 @@ if (processGrid) {
       (item) => `
       <article class="card">
         <div class="step-thumb">
-          <img src="${item.imgSrc}" alt="${item.step} ${item.title}" onerror="this.style.display='none'; this.parentElement.textContent='${item.step} 이미지 영역';" />
+          ${
+            item.imgSrc
+              ? `<img src="${item.imgSrc}" alt="${item.step} ${item.title}" loading="lazy" onerror="this.remove();" />`
+              : ""
+          }
         </div>
         <span class="step-code">${item.step}</span>
         <h3>${item.title}</h3>
